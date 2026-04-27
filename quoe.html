@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Today's Quote</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    }
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      max-width: 600px;
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+    #quote {
+      font-size: 20px;
+      font-style: italic;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>💡 Today's Quote</h1>
+    <p id="quote">Loading...</p>
+  </div>
+
+  <script>
+    const quotes = [
+      "Believe you can and you're halfway there.",
+      "The best way to get started is to quit talking and begin doing.",
+      "Don’t let yesterday take up too much of today.",
+      "It’s not whether you get knocked down, it’s whether you get up.",
+      "Success is not final, failure is not fatal: it is the courage to continue that counts.",
+      "Dream bigger. Do bigger.",
+      "Don’t watch the clock; do what it does. Keep going.",
+      "Great things never come from comfort zones.",
+      "Push yourself, because no one else is going to do it for you.",
+      "Sometimes later becomes never. Do it now.",
+      "Great things never come from comfort zones.",
+      "Dream it. Wish it. Do it.",
+      "Success doesn’t just find you. You have to go out and get it.",
+      "The harder you work for something, the greater you’ll feel when you achieve it.",
+      "Dream bigger. Do bigger.",
+      "Don’t stop when you’re tired. Stop when you’re done.",
+      "Wake up with determination. Go to bed with satisfaction.",
+      "Do something today that your future self will thank you for.",
+      "Little things make big days.",
+      "It’s going to be hard, but hard does not mean impossible.",
+      "Don’t wait for opportunity. Create it.",
+      "Sometimes we’re tested not to show our weaknesses, but to discover our strengths.",
+      "The key to success is to focus on goals, not obstacles.",
+      "Dream it. Believe it. Build it."
+      // 👉 You can add up to 50 quotes here
+    ];
+
+    // Pick a random quote
+    const randomIndex = Math.floor(Math.random() * quotes.length);
+    const todayQuote = quotes[randomIndex];
+
+    // Show on page
+    document.getElementById("quote").textContent = todayQuote;
+  </script>
+</body>
+</html>
